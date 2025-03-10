@@ -9,10 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  imagenes = [
-    { src: 'https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074_1280.jpg', alt: 'Perro feliz' },
-    { src: 'https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_640.jpg', alt: 'Gato curioso' },
-    { src: 'https://cdn.pixabay.com/photo/2016/02/26/16/32/bulldog-1224267_640.jpg', alt: 'Conejo adorable' }
+  videos = [
+    { src: 'https://videos.pexels.com/video-files/2849936/2849936-uhd_2560_1440_24fps.mp4', alt: 'Perro feliz' },
+    { src: 'https://videos.pexels.com/video-files/854982/854982-hd_1280_720_25fps.mp4', alt: 'Gato jugando' },
+    { src: 'https://videos.pexels.com/video-files/6662773/6662773-hd_1280_720_60fps.mp4', alt: 'Conejo tierno' }
   ];
 
+  
 }
