@@ -26,7 +26,7 @@ export class FormularioLoginComponent {
       let token=acceso.accessToken
       if(token!=''){
       localStorage.setItem("login","true")
-      this.router.navigate(['privado'])
+      this.router.navigate(['mascotas'])
     }
     
     })

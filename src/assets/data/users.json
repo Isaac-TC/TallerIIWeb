@@ -31,6 +31,11 @@
       "password": "$2a$10$o3FBkC.aMr7Iz8QKmq8ltuVpOQ4yLLVUseIq8TqTp5152evkoL9wO",
       "id": 6,
       "rol": "docente"
+    },
+    {
+      "email": "cdad1750241034@gmail.com",
+      "password": "$2a$10$4ytSDQgF9gQNRCjTViD00OzspZuQrD8d1TTGJdcJs4XKiSccp3Vly",
+      "id": 7
     }
   ]
 }
