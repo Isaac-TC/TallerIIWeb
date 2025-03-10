@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "email": "is@gmail.com",
+      "password": "$2a$10$OsDpIJLa6pnEW4aRe/cJTudNu/jdr8.kZvTrVX3LaSlFD9FDkN4nO",
+      "id": 1
+    },
+    {
+      "email": "ed@gmail.com",
+      "password": "$2a$10$G./HqhUvvXI0S7Cz5ZcpAuhqq/mZxvtYou/GC5Plsql.cu7foAIwi",
+      "id": 2
+    },
+    {
+      "email": "ed@docente.com",
+      "password": "$2a$10$XxG1bvL1ua6NQwjEBUnrXOs4VMk5CUTW.XmgdwVF1LCpcobUtyxPW",
+      "id": 3
+    },
+    {
+      "email": "ed@estudiante.com",
+      "password": "$2a$10$xFZzDmCDCkmYHAd0ji8uNuylb31zQaIerwYu8atsGqXWFUalSyKHu",
+      "id": 4
+    },
+    {
+      "email": "alumno@estudiante.com",
+      "password": "$2a$10$13L27WFDEs8lnR/pDW6TsuHOAskI9iQYu4AEPXHpAp7mpUS61SP7G",
+      "id": 5,
+      "rol": "docente"
+    },
+    {
+      "email": "profe@docente.com",
+      "password": "$2a$10$o3FBkC.aMr7Iz8QKmq8ltuVpOQ4yLLVUseIq8TqTp5152evkoL9wO",
+      "id": 6,
+      "rol": "docente"
+    }
+  ]
+}

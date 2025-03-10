@@ -1,0 +1,69 @@
+<div class="bg-gray-900 text-white min-h-screen p-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Registro de Mascotas</h2>
+
+    <form (ngSubmit)="idEditar ? actualizarMascota(formulario) : guardar(formulario)" #formulario="ngForm"
+          class="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-200">Nombre</label>
+            <input type="text" [(ngModel)]="nombre" name="nombre" class="input-field" placeholder="Ingrese Nombre" required />
+        </div>
+
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-200">Raza</label>
+            <input type="text" [(ngModel)]="raza" name="raza" class="input-field" placeholder="Ingrese Raza" required />
+        </div>
+
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-200">Tipo</label>
+            <select [(ngModel)]="tipo" name="tipo" class="input-field" >
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Ave">Ave</option>
+            </select>
+        </div>
+
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-200">Edad</label>
+            <input type="number" [(ngModel)]="edad" name="edad" class="input-field"  placeholder="Ingrese Edad" required />
+        </div>
+
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-gray-200">Peso (Kg)</label>
+            <input type="number" [(ngModel)]="peso" name="peso" class="input-field" placeholder="Ingrese Peso (kg)" required />
+        </div>
+
+        <button type="submit" class="btn-submit">{{ idEditar ? 'Actualizar' : 'Registrar' }}</button>
+    </form>
+
+    <h2 class="text-3xl font-bold text-center mt-10 mb-4">Lista de Mascotas</h2>
+
+    <div class="overflow-x-auto bg-gray-800 p-6 rounded-lg shadow-lg max-w-5xl mx-auto">
+        <table class="w-full text-sm text-gray-300">
+            <thead class="bg-gray-700">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Tipo</th>
+                    <th>Edad</th>
+                    <th>Peso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mascota of mascotas">
+                    <td>{{mascota.id}}</td>
+                    <td>{{mascota.nombre}}</td>
+                    <td>{{mascota.raza}}</td>
+                    <td>{{mascota.tipo}}</td>
+                    <td>{{mascota.edad}}</td>
+                    <td>{{mascota.peso}}</td>
+                    <td>
+                        <button (click)="editarMascota(mascota)" class="btn-edit">Editar</button>
+                        <button (click)="eliminarMascota(mascota.idFirebase)" class="btn-delete">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

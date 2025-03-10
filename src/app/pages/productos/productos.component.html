@@ -1,0 +1,63 @@
+<div class="bg-gray-900 text-white min-h-screen p-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Registro de Productos</h2>
+
+    <form (ngSubmit)="guardar(formulario)" #formulario="ngForm" class="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="mb-5">
+            <label for="nombre" class="block mb-2 text-sm font-medium text-gray-200">Ingrese Producto</label>
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" class="input-field" required />
+        </div>
+
+        <div class="mb-5">
+            <label for="categoria" class="block mb-2 text-sm font-medium text-gray-200">Categoría</label>
+            <select name="categoria" id="categoria" [(ngModel)]="categoria" class="input-field">
+                <option value="Juguetes">Juguetes</option>
+                <option value="Alimentos">Alimentos</option>
+                <option value="Servicios">Servicios</option>
+            </select>
+        </div>
+
+        <div class="mb-5">
+            <label for="precio" class="block mb-2 text-sm font-medium text-gray-200">Precio</label>
+            <input type="number" id="precio" name="precio" [(ngModel)]="precio" class="input-field" required />
+        </div>
+
+        <button type="submit" class="btn-submit">Agregar Producto</button>
+    </form>
+
+    <h2 class="text-3xl font-bold text-center mt-10 mb-4">Lista de Productos</h2>
+
+    <div class="overflow-x-auto bg-gray-800 p-6 rounded-lg shadow-lg max-w-5xl mx-auto">
+        <table class="w-full text-sm text-left text-gray-300">
+            <thead class="text-xs uppercase bg-gray-700 text-gray-300">
+                <tr>
+                    <th class="px-6 py-3">Código</th>
+                    <th class="px-6 py-3">Producto</th>
+                    <th class="px-6 py-3">Categoría</th>
+                    <th class="px-6 py-3">Precio</th>
+                    <th class="px-6 py-3 text-center">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos" class="border-b border-gray-700 hover:bg-gray-700 transition">
+                    <th class="px-6 py-4 font-medium text-white">{{producto.id}}</th>
+                    <td class="px-6 py-4">{{producto.nombre}}</td>
+                    <td class="px-6 py-4">{{producto.categoria}}</td>
+                    <td class="px-6 py-4">{{producto.precio | currency}}</td>
+                    <td class="px-6 py-4 text-center">
+                        <button (click)="editarProducto(producto)" class="btn-edit">Editar</button>
+                        <button (click)="eliminarProducto(producto.idFirebase)" class="btn-delete">Eliminar</button>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <button (click)="agregarAlCarrito(producto)" class="btn-car">
+                            🛒 Agregar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-8 text-center">
+        <button routerLink="/factura" class="btn-submit">Ver Factura</button>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="bg-gray-900 text-white min-h-screen p-6">
+    <!-- Título principal -->
+    <h1 class="text-4xl font-bold text-center mb-6">Bienvenidos a PetShop </h1>
+
+    <!-- Galería de imágenes -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div *ngFor="let imagen of imagenes">
+            <img class="h-auto max-w-full rounded-lg shadow-lg" [src]="imagen.src" [alt]="imagen.alt">
+        </div>
+    </div>
+
+    <!-- Sección Misión y Visión en Dos Columnas con Separación -->
+    <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-10">
+        <!-- Misión (Izquierda) -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2 text-center md:text-left relative">
+            <h2 class="text-2xl font-semibold mb-4">Nuestra Misión</h2>
+            <p class="text-gray-300">
+                Brindar bienestar y felicidad a las mascotas, ofreciendo productos y servicios de la mejor calidad.
+            </p>
+        </div>
+
+        <!-- Línea de separación -->
+        <div class="hidden md:block w-1 bg-gray-600 h-32"></div>
+
+        <!-- Visión (Derecha) -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-2xl font-semibold mb-4">Nuestra Visión</h2>
+            <p class="text-gray-300">
+                Ser la tienda de mascotas líder en el país, reconocida por su amor y cuidado hacia los animales.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección de Servicios con Imágenes -->
+    <div class="mt-10 text-center">
+        <h2 class="text-2xl font-semibold mb-4">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <img class="h-40 w-full object-cover rounded-lg mb-4" src="https://cdn.pixabay.com/photo/2021/12/17/19/15/grooming-6877255_640.jpg"alt="Cuidado de mascotas">
+                <h3 class="text-xl font-bold mb-2">Cuidado y Estética</h3>
+                <p class="text-gray-300">Baño, corte y cuidado especial para todo tipo de mascotas.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <img class="h-40 w-full object-cover rounded-lg mb-4" src="https://cdn.pixabay.com/photo/2020/05/13/21/03/dog-food-5168940_640.jpg" alt="Alimentos y accesorios">
+                <h3 class="text-xl font-bold mb-2">Alimentos y Accesorios</h3>
+                <p class="text-gray-300">Venta de productos premium para la alimentación y entretenimiento.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                <img class="h-40 w-full object-cover rounded-lg mb-4" src="https://cdn.pixabay.com/photo/2020/03/17/13/57/veterinary-4940425_640.jpg" alt="Atención veterinaria">
+                <h3 class="text-xl font-bold mb-2">Atención Veterinaria</h3>
+                <p class="text-gray-300">Consultas y atención médica para garantizar la salud de tu mascota.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón de contacto -->
+    <div class="mt-8 text-center">
+        <a href="https://wa.me/593969059135" target="_blank">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                Contáctanos
+            </button>
+        </a>
+        
+</div>
